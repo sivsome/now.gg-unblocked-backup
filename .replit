@@ -1,0 +1,11 @@
+run = ["bash", "main.sh"]
+entrypoint = "main.sh"
+modules = ["python-3.10"]
+
+[[ports]]
+localPort = 8080
+externalPort = 80
+
+[deployment]
+deploymentTarget = "cloudrun"
+run = ["sh", "-c", "bash main.sh"]
